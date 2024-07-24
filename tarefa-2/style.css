@@ -1,0 +1,123 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    display: flex;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+.sidebar {
+    background-color: #00ff00;
+    flex: 1;
+}
+.content {
+    flex: 2;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+header {
+    background-color: #ff9100;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header img {
+    margin-right: 15px;
+}
+header h1 {
+    margin: 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #02a510;
+    margin: 0;
+}
+nav ul li {
+    margin: 0 15px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+nav ul li:hover a {
+    text-decoration: underline;
+}
+main {
+    margin: 20px 0;
+}
+.product-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.product-section img {
+    margin-right: 20px;
+    max-width: 200px;
+    height: auto;
+}
+.product-section p {
+    margin: 0;
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #02a510;
+    color: white;
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        display: none;
+    }
+    .content {
+        flex: 1;
+    }
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    header img {
+        margin-bottom: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .product-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .product-section img {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    main h2 {
+        font-size: 1.2em;
+    }
+    main h3 {
+        font-size: 1em;
+    }
+    .product-section img {
+        max-width: 100%;
+    }
+}
